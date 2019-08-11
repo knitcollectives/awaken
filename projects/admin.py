@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.db import models
-from project.models import Project
+from projects.models import Project
 
 
 # Register your models here.
