@@ -9,10 +9,11 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name
-        
+
     class Meta:
         # Gives the proper plural name for admin
         verbose_name_plural = "Categories"
+
 
 class Post(models.Model):
     title = models.CharField(max_length=255)
@@ -23,6 +24,7 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
 
 class Comment(models.Model):
     author = models.CharField(max_length=60)
