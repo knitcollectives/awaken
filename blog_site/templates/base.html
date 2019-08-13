@@ -9,9 +9,8 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Voltaire&display=swap" rel="stylesheet">
   </head>
-<body>
 
-<nav class="navbar sticky-topCinzel Decorative navbar-expand-lg navbar-light bg-light">
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
     <div class="container">
         <a class="navbar-brand" style="font-family: 'Voltaire', sans-serif;" href="{% url 'project_index' %}">Awaken Oneness</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +32,8 @@
 </nav>
 
 <div class="container">
-    {% block content %}  {% endblock %}
+    {% block content %}
+    {% endblock %}
 </div>
 </body>
 
