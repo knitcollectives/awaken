@@ -7,7 +7,9 @@ class Project(models.Model):
     description = models.TextField()
     category = models.CharField(max_length=20)
     published = models.DateTimeField("date published", default=datetime.now())
-    image = models.FilePathField(path="projects/static/img")
+    image = models.ImageField(upload_to='projects/static/img')
+    #image = models.FilePathField(path="projects/static/img")
+
 
     def __str__(self):
         return self.title
