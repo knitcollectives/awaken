@@ -1,0 +1,28 @@
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <div class="wrapper" style="text-align: center">
+      <h5 class="card-title">About Author</h5>
+        <p>
+          Aenean vehicula orci ac urna molestie, nec pulvinar est lacinia. Vestibulum
+          venenatis porim. ex. Pellentesque mi ipsum, vehicula in scelerisque quis,
+          elementum eget dui. Nulla varius laoreet ipsum eu dignissim.
+        </p>
+      <hr>
+    </div>
+  </div>
+</div>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <div class="wrapper" style="text-align: center">
+      <h5 class="card-title">Categories</h5>
+        {% for category in post.categories.all %}
+          <ul class="category-list">
+            <li class="category-item">
+              <a href="{% url 'blog_category' category.nanme %}">{{ category.name }}</a>
+            </li>
+        {% endfor %}
+      <hr>
+    </div>
+  </div>
+</div>

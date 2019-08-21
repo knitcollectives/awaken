@@ -1,0 +1,36 @@
+.nav-link {
+    color: #000000;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.85;
+    font-weight: 400;
+    font-size: 14px
+}
+
+a:hover {
+    color: #ae3c4e;
+}
+
+h2 {
+    color: #333333;
+    font-family: 'Droid Serif', serif;
+    font-weight: 400;
+}
+
+.site-branding {
+    text-align: center;
+    padding: 30px 0;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.navbar-brand {
+    font-family: 'Voltaire', sans-serif;
+    justify-content: center;
+}
+
+.wrapper {
+    padding: 20px 35px;
+}
+
+.card {
+  margin: 20px 10px; 
+}

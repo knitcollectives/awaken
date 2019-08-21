@@ -1,36 +1,64 @@
 <!doctype html>
 <html lang="en">
   <head>
+    {% load static %}
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- style.css -->
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- reference your copy Font Awesome here (from our CDN or by hosting yourself) -->
+    <link href="/static/fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="/static/fontawesome/css/brands.css" rel="stylesheet">
+    <link href="/static/fontawesome/css/solid.css" rel="stylesheet">
     <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Voltaire&display=swap" rel="stylesheet">
-  </head>
+    <!-- Google Web Icon Fonts -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+</head>
 
-<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+<div class="site-branding">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
     <div class="container">
-        <a class="navbar-brand" style="font-family: 'Voltaire', sans-serif;" href="{% url 'project_index' %}">Awaken Oneness</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="{% url 'project_index' %}">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'blog_index' %}">Blog</a>
-            </li>
-          </ul>
-        </div>
-    </div>
-
-</nav>
-
+      <a class="navbar-brand" href="{% url 'project_index' %}"><h3>Awaken Oneness</h3></a>
+      <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'project_index' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'blog_index' %}">Blog</a>
+                </li>
+              </ul>
+            </div>-->
+        {% include 'includes/top_nav_social.html' %}
+      </div>
+    </nav>
+  </div>
+</div>
+<div class="container">
+      {% include 'includes/navbar-items.html' %}
+</div>
+<br>
+<br>
+<br>
+<div class="wrapper">
+  <div class="card bg-dark text-white">
+    <img src="/static/img/brynden-oIN4fV6DxAQ-unsplash.jpg" class="card-img" alt="Header_Image" width="700" height="400"/>
+    <div class="card-img-overlay">
+      <h5 class="card-title"></h5>
+      <p class="card-text"></p>
+      <p class="card-text"></p>
+  </div>
+</div>
+<br>
+<br>
 <div class="container">
     {% block content %}
     {% endblock %}

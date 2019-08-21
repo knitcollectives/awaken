@@ -21,6 +21,7 @@ class Post(models.Model):
     created_on = models.DateTimeField("date published", default=datetime.now())
     last_modified = models.DateTimeField(auto_now=True)
     categories = models.ManyToManyField('Category', related_name='posts')
+    #byline = models.ManyToManyField('byline', related_name='posts')
 
     def __str__(self):
         return self.title

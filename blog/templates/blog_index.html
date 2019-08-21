@@ -1,19 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="col-md-8 offset-md-2">
-    <h2>Blog</h2>
-    <hr>
-    {% for post in posts %}
-    <h2><a href="{% url 'blog_detail' post.pk %}">{{ post.title }}</a></h2>
-    <small>
-        {{ post.created_on.date }} | Categories:&nbsp;
-        {% for category in post.categories.all %}
-        <a href="{% url 'blog_category' category.name %}">
-            {{ category.name }}
-        </a>&nbsp;
+<div class="row">
+    <div class="col-md-8">
+        <h1>Blog</h1>
+        <hr>
+        {% for post in posts %}
+        <h2><a href="{% url 'blog_detail' post.pk %}">{{ post.title }}</a></h2>
+        <small>
+             <i class="material-icons-outlined" style="vertical-align: bottom">folder</i>&nbsp;
+            {% for category in post.categories.all %}
+            <a href="{% url 'blog_category' category.name %}">
+                {{ category.name }} </a>| Published: {{ post.created_on.date }} &nbsp;
+            {% endfor %}
+        </small>
+        <p>{{ post.body|safe | slice:":400" }}&nbsp; ...</p>
         {% endfor %}
-    </small>
-    <p>{{ post.body|safe | slice:":400" }}&nbsp; ...</p>
-    {% endfor %}
+    </div>
+    <div class="col-md-4">
+        {% include 'includes/about_sidebar.html' %}
+    </div>
 </div>
 {% endblock %}
