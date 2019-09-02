@@ -24,29 +24,13 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-white">
     <div class="container">
       <a class="navbar-brand" href="{% url 'project_index' %}"><h3>Awaken Oneness</h3></a>
-      <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-          </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="{% url 'project_index' %}">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="{% url 'blog_index' %}">Blog</a>
-                </li>
-              </ul>
-            </div>-->
-        {% include 'includes/top_nav_social.html' %}
-      </div>
-    </nav>
-  </div>
+      {% include 'includes/top_nav_social.html' %}
+    </div>
+  </nav>
 </div>
 <div class="container">
       {% include 'includes/navbar-items.html' %}
 </div>
-<br>
-<br>
 <br>
 <div class="wrapper">
   <div class="card bg-dark text-white">

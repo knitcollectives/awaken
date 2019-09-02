@@ -6,6 +6,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib import messages
 from .forms import NewUserForm
 
+
 # Create your views here.
 def homepage(request):
     return render(request,
