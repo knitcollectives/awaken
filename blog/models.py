@@ -1,9 +1,8 @@
 from django.db import models
 from datetime import datetime
 
-# Create your models here.
-from django.db import models
 
+# Create your models here.
 class Category(models.Model):
     name = models.CharField(max_length=20)
 
@@ -15,13 +14,23 @@ class Category(models.Model):
         verbose_name_plural = "Categories"
 
 
+class Byline(models.Model):
+    name = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Author"
+
+
 class Post(models.Model):
     title = models.CharField(max_length=255)
     body = models.TextField()
     created_on = models.DateTimeField("date published", default=datetime.now())
     last_modified = models.DateTimeField(auto_now=True)
     categories = models.ManyToManyField('Category', related_name='posts')
-    #byline = models.ManyToManyField('byline', related_name='posts')
+    author = models.ManyToManyField('byline', related_name='posts')
 
     def __str__(self):
         return self.title
