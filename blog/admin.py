@@ -3,6 +3,7 @@ from django.db import models
 from blog.models import Post, Category, Byline
 from tinymce.widgets import TinyMCE
 
+
 # Register your models here.
 class PostAdmin(admin.ModelAdmin):
 
@@ -29,3 +30,4 @@ class BylineAdmin(admin.ModelAdmin):
 
 admin.site.register(Post, PostAdmin)
 admin.site.register(Category, CategoryAdmin)
+admin.site.register(Byline, BylineAdmin)

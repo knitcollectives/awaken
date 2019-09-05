@@ -11,7 +11,7 @@ a:hover {
 }
 
 h2 {
-    color: #333333;
+    color: dark;
     font-family: 'Droid Serif', serif;
     font-weight: 400;
 }
@@ -32,5 +32,5 @@ h2 {
 }
 
 .card {
-  margin: 20px 10px; 
+  margin: 20px 10px;
 }

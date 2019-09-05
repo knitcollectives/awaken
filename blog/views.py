@@ -13,6 +13,10 @@ def homepage(request):
                   template_name='base.html',
                   context={"posts": Post.objects.all})
 
+def services(request):
+    return render(request,
+                  template_name='services.html')
+                  
 
 def logout_request(request):
     logout(request)
