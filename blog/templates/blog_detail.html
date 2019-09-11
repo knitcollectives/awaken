@@ -5,7 +5,7 @@
     <small>
         <i class="material-icons-outlined" style="vertical-align: bottom">folder</i>&nbsp;
         {% for category in post.categories.all %}
-        <a href="{% url 'blog_category' category.name %}">
+        <a href="{% url 'blog_category' category.name %}" class="text-info">
             {{ category.name }}
         </a> | Published: {{ post.created_on.date }} &nbsp;
         {% endfor %}
@@ -20,7 +20,7 @@
         <div class="form-group">
             {{ form.body }}
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-info btn-sm">Submit</button>
     </form>
     <h3>Comments:</h3>
     {% for comment in comments %}

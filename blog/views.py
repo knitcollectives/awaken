@@ -16,12 +16,12 @@ def homepage(request):
 def services(request):
     return render(request,
                   template_name='services.html')
-                  
+
 
 def logout_request(request):
     logout(request)
     messages.info(request, "Logged out successfully!")
-    return redirect("/blog")
+    return redirect("/login")
 
 
 def login_request(request):

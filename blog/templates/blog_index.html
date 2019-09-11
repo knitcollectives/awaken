@@ -5,11 +5,11 @@
         <h1>Blog</h1>
         <hr>
         {% for post in posts %}
-        <h2><a href="{% url 'blog_detail' post.pk %}">{{ post.title }}</a></h2>
+        <h2><a href="{% url 'blog_detail' post.pk %}" class="text-info">{{ post.title }}</a></h2>
         <small>
              <i class="material-icons-outlined" style="vertical-align: bottom">folder</i>&nbsp;
             {% for category in post.categories.all %}
-            <a href="{% url 'blog_category' category.name %}">
+            <a href="{% url 'blog_category' category.name %}" class="text-info">
                 {{ category.name }} </a>| Published: {{ post.created_on.date }} &nbsp;
             {% endfor %}
         </small>

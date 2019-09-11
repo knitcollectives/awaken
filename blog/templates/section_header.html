@@ -5,10 +5,10 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- style.css -->
-    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- style.css -->
+    <link rel="stylesheet" type="text/css" href="{% static '/css/style.css' %}">
     <!-- reference your copy Font Awesome here (from our CDN or by hosting yourself) -->
     <link href="/static/fontawesome/css/fontawesome.css" rel="stylesheet">
     <link href="/static/fontawesome/css/brands.css" rel="stylesheet">
@@ -21,7 +21,7 @@
   </head>
 <body>
   <div class="site-branding">
-    <nav class="navbar navbar-expand-sm navbar-light bg-white">
+    <nav class="navbar navbar-expand-sm navbar-light bg-grey lighten-4">
       <div class="container">
         <a class="navbar-brand" href="{% url 'project_index' %}"><h3>Awaken Oneness</h3></a>
         {% include 'includes/top_nav_social.html' %}

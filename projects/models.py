@@ -7,7 +7,7 @@ class Project(models.Model):
     description = models.TextField()
     category = models.CharField(max_length=20)
     published = models.DateTimeField("date published", default=datetime.now())
-    image = models.FilePathField(path="blog/static/img")
+    image = models.FilePathField(path="static/img")
 
 
     def __str__(self):
