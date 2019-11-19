@@ -4,13 +4,13 @@ from blog.forms import CommentForm
 from django.contrib.auth import logout, authenticate, login
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib import messages
-from .forms import NewUserForm
+from .forms import NewUserForm, Contact
 
 
 # Create your views here.
 def homepage(request):
     return render(request,
-                  template_name='base.html',
+                  template_name='index.html',
                   context={"posts": Post.objects.all})
 
 def services(request):
@@ -100,3 +100,17 @@ def blog_detail(request, pk):
 
     context = {"post": post, "comments": comments, "form": form}
     return render(request, "blog_detail.html", context)
+
+
+def contact(request):
+
+    if request.method == 'POST':
+        form = Contact(request.POST)
+
+        if form.is_valid():
+            form.save()
+
+    form = Contact()
+    return render(request,
+                  template_name='contact.html',
+                  context={'form': form})

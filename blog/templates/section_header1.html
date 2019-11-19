@@ -18,46 +18,26 @@
     <link href="https://fonts.googleapis.com/css?family=Voltaire&display=swap" rel="stylesheet">
     <!-- Google Web Icon Fonts -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
-    <!-- Prism CSS -->
-    <link href="{% static "tinymce/css/prism.css" %}" rel="stylesheet">
-
-
   </head>
-  <body>
-    <div class='container'>
-      <div class="site-branding">
-        <nav class="navbar navbar-expand-sm navbar-light bg-grey lighten-4">
-            <a class="navbar-brand" href="{% url 'project_index' %}"><h3>Awaken Oneness</h3></a>
-            {% include 'includes/top_nav_social.html' %}
-        </nav>
-      </div>
-    </div>
-    <div class="nav-container">
-          {% include 'includes/navbar-items.html' %}
-    </div>
-    <br>
-    <div class="jumbotron jumbotron-fluid bg-dark">
-
-      <div class="jumbotron-background">
-        <img src="/static/img/bg-img.jpg">
-      </div>
-
-      <div class="container text-white">
-
-        <h3 class="display-4">Welcome to Awaken Oneness</h1>
-        <p class="lead">Medicine From Within</p>
-        <p>...</p>
-        <a class="btn btn-info btn-lg" href="#" role="button">Contact Us</a>
-
-      </div>
-    </div>
-    <div class="container">
-        {% block content %}
-        {% endblock %}
+<body>
+  <div class='container'>
+    <div class="site-branding">
+      <nav class="navbar navbar-expand-sm navbar-light bg-grey lighten-4">
+          <a class="navbar-brand" href="{% url 'project_index' %}"><h3>Awaken Oneness</h3></a>
+          {% include 'includes/top_nav_social.html' %}
+      </nav>
     </div>
   </div>
+  <div class="container">
+    {% include 'includes/navbar-items.html' %}
+  </div>
+  <br>
+  <div class="container">
+      {% block content %}
+      {% endblock %}
+  </div>
 </body>
-</html>
+
 <!-- Compiled and minified JavaScript -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

@@ -1,6 +1,7 @@
-{% extends "base.html" %}
+{% extends "section_header.html" %}
 {% block content %}
-<div class="row">
+
+<div class="row content">
     <div class="col-md-8">
         <h1>Blog</h1>
         <hr>
@@ -15,9 +16,6 @@
         </small>
         <p>{{ post.body|safe | slice:":400" }}&nbsp; ...</p>
         {% endfor %}
-    </div>
-    <div class="col-md-4">
-        {% include 'includes/about_sidebar.html' %}
     </div>
 </div>
 {% endblock %}

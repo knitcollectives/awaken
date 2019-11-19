@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'projects',
     'blog',
-    'tinymce'
+    'tinymce',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [

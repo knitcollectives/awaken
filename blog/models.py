@@ -41,3 +41,29 @@ class Comment(models.Model):
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     post = models.ForeignKey('Post', on_delete=models.CASCADE)
+
+
+class Contact(models.Model):
+    name = models.CharField(max_length=30)
+    email = models.CharField(max_length=30)
+    phone = models.CharField(max_length=30)
+    service = models.ManyToManyField('Service', related_name='contact', default='None Selected')
+    subject = models.CharField(max_length=40)
+    body = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Contact"
+
+
+class Service(models.Model):
+    name = models.CharField(max_length=40)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        # Gives the proper plural name for admin
+        verbose_name_plural = "Services"

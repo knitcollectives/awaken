@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.db import models
-from blog.models import Post, Category, Byline
+from blog.models import Post, Category, Byline, Contact, Service
 from tinymce.widgets import TinyMCE
 
 
@@ -28,6 +28,15 @@ class BylineAdmin(admin.ModelAdmin):
     pass
 
 
+class ContactAdmin(admin.ModelAdmin):
+    pass
+
+
+class ServiceAdmin(admin.ModelAdmin):
+    pass
+
 admin.site.register(Post, PostAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Byline, BylineAdmin)
+admin.site.register(Contact, ContactAdmin)
+admin.site.register(Service, ServiceAdmin)

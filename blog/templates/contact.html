@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+{% extends "section_header.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div=class="contact-form">
+  <div class"row justify-content">
+    <div class="container">
+      <h1>Contact Us</h1>
+      <hr>
+      <br>
+      <form method='post'>
+        {% csrf_token %}
+        <div class="container">
+          <div class="form-row">
+            <div class="col-5">
+              <div class="form-group">
+                <label for="first_name">First Name</label>
+                <div>
+                  {{ form.name }}
+                </div>
+              </div>
+            </div>
+            <div class="col-5">
+              <div class="form-group">
+                <label for="last_name">Last Name</label>
+                <div>
+                  {{ form.name }}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="col-5">
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <div>
+                  {{ form.phone }}
+                </div>
+              </div>
+            </div>
+            <div class="col-5">
+              <div class="form-group">
+                <label for="email_address">Email address</label>
+                  <div>
+                    {{ form.email }}
+                  </div>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+            </div>
+          </div>
+            <div class="form-group">
+              <label for="Service">Services</label>
+                <div>
+                  {{ form.service }}
+                </div>
+              <label for="subject">Subject</label>
+                <div>
+                  {{ form.subject }}
+                </div>
+              <label for="body">Body</label>
+                <div>
+                  {{ form.body }}
+                </div>
+            </div>
+            <button type="submit" class="btn btn-info">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

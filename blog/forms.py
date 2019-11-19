@@ -1,7 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
-
+from .models import Contact, Service
 
 class NewUserForm(UserCreationForm):
     email = forms.EmailField(required=True)
@@ -32,3 +32,13 @@ class CommentForm(forms.Form):
             "placeholder": "Leave a comment!"
         })
 )
+
+
+class Contact(forms.ModelForm):
+    # category =  forms.ModelChoiceField(queryset=Category.objects.all().order_by('pk'))
+    #
+    service = forms.ModelMultipleChoiceField(label="Service", widget=forms.CheckboxSelectMultiple, queryset=Service.objects.all().order_by('pk'))
+    class Meta:
+        model = Contact
+        fields = ('name', 'email', 'phone', 'service',
+                  'subject', 'body')
